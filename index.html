@@ -1,161 +1,125 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NaDifTech</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to bottom right, #72E08D, #34A853);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #fff;
-            overflow: hidden;
-        }
-        .container {
-            text-align: center;
-            max-width: 500px;
-            padding: 20px;
-            border-radius: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-        }
-        .section {
-            display: none;
-        }
-        .section.active {
-            display: block;
-        }
-        .logo img {
-            width: 120px;
-            animation: spin 3s linear infinite;
-        }
-        h1 {
-            font-size: 24px;
-            margin: 20px 0;
-        }
-        .animated-image {
-            width: 100%;
-            height: auto;
-            margin: 20px 0;
-            border-radius: 10px;
-            overflow: hidden;
-            animation: float 3s ease-in-out infinite;
-        }
-        .btn {
-            background: linear-gradient(to right, #56CCF2, #2F80ED);
-            color: #fff;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 30px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.3s;
-            margin: 10px 0;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .btn:hover {
-            background: linear-gradient(to right, #2F80ED, #56CCF2);
-            transform: translateY(-5px);
-        }
-        .btn-icon {
-            margin-right: 10px;
-        }
-        .social-icons img {
-            width: 40px;
-            height: auto;
-            margin: 0 10px;
-            transition: transform 0.3s;
-        }
-        .social-icons img:hover {
-            transform: scale(1.2);
-        }
-        .download-options {
-            display: none;
-        }
-        .download-options.active {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0); }
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .fade-in {
-            animation: fadeIn 1s ease-in-out;
-        }
-    </style>
+    <title>NaDifTech - Waste Management</title>
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 <body>
-    <div class="container">
-        <div id="section1" class="section active fade-in">
-            <div class="logo">
-                <img src="images/logo.png" alt="NaDifTech Logo">
-            </div>
-            <h1>Recycle Smart, Live Sustainable with NaDifTech</h1>
-            <img src="images/tenor.gif" alt="Recyclage Intelligent" class="animated-image">
-            <button class="btn" onclick="showDownloadOptions()">
-                Télécharger l'Application
-            </button>
-            <button class="btn" onclick="showSection('section2')">
-               À propos de NaDifTech
-            </button>
-            <div id="downloadOptions" class="download-options">
-                <a href="https://play.google.com/store" class="btn">
-                    <img src="android-icon.png" alt="Android Icon" class="btn-icon">Android
-                </a>
-                <a href="https://www.apple.com/app-store/" class="btn">
-                    <img src="ios-icon.png" alt="iOS Icon" class="btn-icon">iOS
-                </a>
-            </div>
+    <header>
+        <div class="container header-container">
+            <img src="images/logo.png" alt="NaDifTech Logo" class="logo">
+            <h1>NaDifTech</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#app">App</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <div id="section2" class="section fade-in">
-            <h1>À propos de NaDifTech</h1>
-            <p>NaDifTech est une application dédiée à promouvoir le recyclage intelligent et durable. Notre objectif est de faciliter le recyclage pour tout le monde grâce à des technologies avancées et des solutions innovantes.</p>
-            <h2>Contact</h2>
-            <p>Email: info@nadiftech.com</p>
-            <p>Téléphone: +123 456 7890</p>
-            <div class="social-icons">
-                <a href="https://instagram.com"><img src="images/inst.jpg" alt="Instagram"></a>
-                <a href="https://linkedin.com"><img src="images/link.jpg" alt="LinkedIn"></a>
-            
-            </div>
-            <button class="btn" onclick="showSection('section1')">
-              Retour
-            </button>
-        </div>
-    </div>
-    <script>
-        function showDownloadOptions() {
-            document.getElementById('downloadOptions').classList.toggle('active');
-        }
+    </header>
 
-        function showSection(sectionId) {
-            document.querySelectorAll('.section').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(sectionId).classList.add('active');
-        }
+    <section id="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <div class="logo-animation" data-aos="zoom-in">
+                <img src="images/logo.png" alt="NaDifTech Logo" class="circular-logo">
+            </div>
+            <h2 data-aos="fade-down">Welcome to Our Solution NaDifTech</h2>
+            <p data-aos="fade-up">Efficient Waste Management</p>
+            <a href="#download" class="btn-download" data-aos="fade-up">Download the App</a>
+        </div>
+    </section>
+
+    <section id="about" class="container" data-aos="fade-right">
+        <div class="about-content">
+            <div class="about-description" data-aos="fade-left">
+                <h2>About NaDifTech</h2>
+                <p>NADIFTECH introduces an innovative solution centered around smart trash bins equipped with 
+                    unique QR codes and advanced sensors. These smart bins are designed to streamline the 
+                    waste disposal process, ensuring accurate waste segregation and incentivizing users to 
+                    participate actively. By scanning the QR code on the bin with our mobile app, users can unlock 
+                    the bin, dispose of their waste in the designated spots, and earn points for correct sorting. 
+                    These points can be redeemed with our partnered businesses, creating a rewarding cycle of 
+                    responsible waste management.</p>
+            </div>
+            <img src="images/WhatsApp Image 2024-07-26 at 4.03.48 PM.jpeg" alt="About NaDifTech" class="about-image" data-aos="fade-right">
+        </div>
+    </section>
+
+    
+    <section id="app" class="container">
+        <h2>Our Application</h2>
+        <div class="app-feature" data-aos="zoom-in">
+            <img src="images/recycl.jpeg" alt="Waste Tracking">
+            <div>
+                <h3>Waste Tracking</h3>
+                <p>The NADIFTECH app monitors your waste disposal habits, helping you stay informed about your contributions to waste management.</p>
+            </div>
+        </div>
+        <div class="app-feature" data-aos="zoom-in">
+            <img src="images/close.jpeg" alt="Points System">
+            <div>
+                <h3>Points System</h3>
+                <p>Earn points for proper waste disposal and recycling activities, which can be redeemed for rewards and incentives.</p>
+            </div>
+        </div>
+        <div class="app-feature" data-aos="zoom-in">
+            <img src="images/qa.jpeg" alt="Educational Resources">
+            <div>
+                <h3>Educational Resources</h3>
+                <p>Access a wealth of information on waste management best practices and tips through our educational resources within the app.</p>
+            </div>
+        </div>
+        <div class="app-feature" data-aos="zoom-in">
+            <img src="images/communité.jpeg" alt="Community Feed">
+            <div>
+                <h3>Community Feed</h3>
+                <p>Stay updated with the latest news and awareness campaigns in waste management, and connect with other users through our community feed.</p>
+            </div>
+        </div>
+        <div class="app-feature" data-aos="zoom-in">
+            <img src="images/bonus.jpeg" alt="Bonus Rewards">
+            <div>
+                <h3>Bonus Rewards</h3>
+                <p>Earn bonus rewards for consistent and exceptional waste management efforts. Redeem these bonuses for exciting offers and benefits.</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contact" class="container" data-aos="fade-left">
+        <h2>Contact Us</h2>
+        <p>For more information, please contact us at <a href="mailto:info@nadiftech.com">info@nadiftech.com</a>.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/yourusername" target="_blank" class="social-link" data-aos="fade-up">
+                <img src="images/inst.jpg" alt="Instagram">
+                Instagram
+            </a>
+            <a href="https://www.linkedin.com/company/yourcompany" target="_blank" class="social-link" data-aos="fade-up">
+                <img src="images/link.jpg" alt="LinkedIn">
+                LinkedIn
+            </a>
+        </div>
+    </section>
+    <section id="download" class="container" data-aos="fade-up">
+        <h2>Download Our App</h2>
+        <p>Get the NaDifTech app today and start managing your waste efficiently!</p>
+        <a href="#" class="btn-download">Download for Android</a>
+        <a href="#" class="btn-download">Download for iOS</a>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 NaDifTech. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 </html>

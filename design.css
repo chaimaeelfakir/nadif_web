@@ -1,0 +1,292 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 0; /* Réduit la hauteur du header */
+}
+
+header {
+    background-color: #4CAF50; /* Couleur verte */
+    color: #fff; /* Texte blanc */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header .logo {
+    height: 30px; /* Logo plus petit */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1em;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fffefe;
+}
+
+#hero {
+    background-color: #dbfff3; /* Fond vert clair */
+    text-align: center;
+    padding: 5em 0;
+    position: relative;
+    margin-top: 60px; /* Ajustement pour le header fixe */
+}
+
+.hero-content {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content h2 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #4CAF50; /* Couleur verte */
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color: #4CAF50; /* Couleur verte */
+}
+
+.circular-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #4CAF50;
+    animation: spin 4s linear infinite, zoom 3s infinite alternate;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+section {
+    padding: 2em 0;
+}
+
+section h2 {
+    border-bottom: 2px solid #4CAF50; /* Bordure verte */
+    padding-bottom: 0.5em;
+    color: #4CAF50; /* Couleur verte */
+}
+
+section p {
+    line-height: 1.6;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+.about-description {
+    flex: 1;
+    padding-right: 1em;
+}
+
+.about-image {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.app-feature {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.app-feature:hover {
+    transform: scale(1.05);
+}
+
+.app-feature img {
+    height: 100px;
+    margin-right: 1em;
+    border-radius: 10px;
+}
+
+.app-feature div {
+    flex: 1;
+}
+
+#contact a {
+    color: #4CAF50; /* Couleur verte */
+    text-decoration: none;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-description {
+        padding-right: 0;
+        padding-bottom: 1em;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .app-feature {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .app-feature img {
+        margin-bottom: 1em;
+    }
+}
+/* Autres styles déjà définis */
+
+.btn-download {
+    display: inline-block;
+    padding: 0.8em 2em;
+    margin-top: 1em;
+    font-size: 1em;
+    color: #fff;
+    background-color: #4CAF50; /* Couleur verte */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-download:hover {
+    background-color: #45a049; /* Couleur verte plus foncée */
+    transform: scale(1.05);
+}
+
+#download {
+    text-align: center;
+    padding: 3em 0;
+}
+
+#download h2 {
+    margin-bottom: 1em;
+    color: #4CAF50; /* Couleur verte */
+}
+
+#download p {
+    margin-bottom: 1.5em;
+    font-size: 1.2em;
+}
+/* Autres styles déjà définis */
+
+.social-links {
+    display: flex;
+    gap: 1em;
+    margin-top: 1em;
+    justify-content: center;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.social-link img {
+    width: 30px; /* Ajustez la taille selon vos préférences */
+    height: 30px;
+    margin-right: 0.5em;
+}
+
+.social-link:hover {
+    color: #4CAF50; /* Couleur verte pour le survol */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
