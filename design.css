@@ -27,7 +27,6 @@ header {
 
 .header-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 0.5em 0.5em; /* Réduit la hauteur du header */
     flex-wrap: wrap; /* Permet au contenu de se réorganiser si nécessaire */
@@ -44,7 +43,7 @@ nav ul {
     padding: 0;
     display: flex;
     gap: 1em;
-    margin: 0;
+    margin-left: 10%;
     flex-wrap: wrap; /* Permet aux éléments de se réorganiser sur de petits écrans */
 }
 
