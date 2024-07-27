@@ -137,11 +137,13 @@ section p {
     display: flex;
     flex-wrap: wrap; /* Permet aux éléments de se réorganiser sur de petits écrans */
     gap: 1em;
+    align-items: center;
 }
 
 .about-description {
     flex: 1;
     padding-right: 1em;
+    order: 2; /* Place la description à gauche sur les petits écrans */
 }
 
 .about-image {
@@ -149,6 +151,7 @@ section p {
     max-width: 500px; /* Limite la largeur maximale */
     height: auto;
     border-radius: 10px;
+    order: 1; /* Place l'image à droite sur les petits écrans */
 }
 
 .app-feature {
@@ -269,11 +272,13 @@ footer {
     .about-description {
         padding-right: 0;
         padding-bottom: 1em;
+        order: 1; /* Place la description au-dessus sur les petits écrans */
     }
 
     .about-image {
         width: 100%;
         max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de l'écran */
+        order: 2; /* Place l'image en dessous sur les petits écrans */
     }
 
     .app-feature {
