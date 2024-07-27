@@ -29,17 +29,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5em 1em; /* Réduit la hauteur du header */
+    padding: 0.5em 0.5em; /* Réduit la hauteur du header */
     flex-wrap: wrap; /* Permet au contenu de se réorganiser si nécessaire */
 }
 
-header .logo {
-    height: 30px; /* Logo plus petit */
-}
 
 header h1 {
-    margin: 0;
-    font-size: 1.5em;
+    margin: 10;
+    font-size: 1.2em;
 }
 
 nav ul {
@@ -66,7 +63,7 @@ nav ul li a:hover {
 }
 
 #hero {
-    background-color: #dbfff3; /* Fond vert clair */
+    background-color: #effffa; /* Fond vert clair */
     text-align: center;
     padding: 5em 1em;
     position: relative;
