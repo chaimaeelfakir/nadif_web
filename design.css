@@ -48,7 +48,7 @@ nav ul {
     display: flex;
     gap: 1em;
     margin: 0;
-    flex-wrap: wrap; /* Permet aux éléments de se réorganiser sur de petits écrans */
+    flex-wrap:nowrap; /* Permet aux éléments de se réorganiser sur de petits écrans */
 }
 
 nav ul li {
@@ -78,8 +78,8 @@ nav ul li a:hover {
 }
 
 .hero-content h2 {
-    margin: 0;
-    font-size: 2.5em;
+    margin: 10;
+    font-size: 1.5em;
     color: #4CAF50; /* Couleur verte */
 }
 
@@ -143,7 +143,7 @@ section p {
 .about-description {
     flex: 1;
     padding-right: 1em;
-    order: 2; /* Place la description à gauche sur les petits écrans */
+    order: 2 ; /* Place la description à gauche sur les petits écrans */
 }
 
 .about-image {
